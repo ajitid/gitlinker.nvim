@@ -17,7 +17,7 @@ local function set_keymap(mode, keys, mapping_opts)
 end
 
 function M.set(mappings)
-  if mappings == nil then
+  if mappings == false then
     return
   end
 
