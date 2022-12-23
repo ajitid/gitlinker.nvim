@@ -130,15 +130,15 @@ require"gitlinker".setup({
   callbacks = {
         ["github.com"] = require"gitlinker.hosts".get_github_type_url,
         ["gitlab.com"] = require"gitlinker.hosts".get_gitlab_type_url,
-        ["try.gitea.io"] = require"gitlinker.hosts"get_gitea_type_url,
-        ["codeberg.org"] = require"gitlinker.hosts"get_gitea_type_url,
-        ["bitbucket.org"] = require"gitlinker.hosts"get_bitbucket_type_url,
-        ["try.gogs.io"] = require"gitlinker.hosts"get_gogs_type_url,
-        ["git.sr.ht"] = require"gitlinker.hosts"get_srht_type_url,
-        ["git.launchpad.net"] = require"gitlinker.hosts"get_launchpad_type_url,
-        ["repo.or.cz"] = require"gitlinker.hosts"get_repoorcz_type_url,
-        ["git.kernel.org"] = require"gitlinker.hosts"get_cgit_type_url,
-        ["git.savannah.gnu.org"] = require"gitlinker.hosts"get_cgit_type_url
+        ["try.gitea.io"] = require"gitlinker.hosts".get_gitea_type_url,
+        ["codeberg.org"] = require"gitlinker.hosts".get_gitea_type_url,
+        ["bitbucket.org"] = require"gitlinker.hosts".get_bitbucket_type_url,
+        ["try.gogs.io"] = require"gitlinker.hosts".get_gogs_type_url,
+        ["git.sr.ht"] = require"gitlinker.hosts".get_srht_type_url,
+        ["git.launchpad.net"] = require"gitlinker.hosts".get_launchpad_type_url,
+        ["repo.or.cz"] = require"gitlinker.hosts".get_repoorcz_type_url,
+        ["git.kernel.org"] = require"gitlinker.hosts".get_cgit_type_url,
+        ["git.savannah.gnu.org"] = require"gitlinker.hosts".get_cgit_type_url
   },
 -- default mapping to call url generation with action_callback
   mappings = "<leader>gy"
@@ -245,7 +245,7 @@ You can define your own action callback.
 
 For example, to copy the url over a remote SSH session with an
 [OSC52][osc52]-compatible terminal, you can integrate gitlinker with
-[ojroques/vim-oscyank](oscyank) and use its `OSCYankString` function:
+[ojroques/vim-oscyank][oscyank] and use its `OSCYankString` function:
 
 ```lua
 require'gitlinker'.setup{
@@ -260,7 +260,7 @@ require'gitlinker'.setup{
 }
 ```
 
-For the above setup, make sure that [ojroques/vim-oscyank](oscyank) is also
+For the above setup, make sure that [ojroques/vim-oscyank][oscyank] is also
 installed.
 
 [osc52]: https://invisible-island.net/xterm/ctlseqs/ctlseqs.html#h3-Operating-System-Commands
